@@ -5,6 +5,7 @@
     text-align: center;
     color: white;
     padding-top: 10%;
+    margin-top: 0px;
 }
 
 .main-content{
@@ -12,16 +13,19 @@
     text-align: center;
     font-size: 18px;
     font-family: 'Source Sans Pro', sans-serif;
-    padding-left: 30%;
-    padding-right: 30%;
-    padding-bottom: 2%;
-    padding-top: 2%;
     line-height: 1.5;
 }
 
 .hero {
-    background-image: url(gavel-hero.png);
+    background-image: url(justice-gavel-and-book.png);
     background-size: cover;
+    background-position: 0px -120px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    width: 70%;
 }
 
 .search{
@@ -38,7 +42,7 @@
 .logo {
     float: left;
     font-family: 'Lato', sans-serif;
-    padding: 10px;
+    padding: 20px;
     font-size: 26px;
     font-weight: 400;
 }
@@ -50,22 +54,12 @@
 .nav-links{
     float: right;
     margin-left: 10px;
-    padding-top: 42px;
+    padding-top: 52px;
     padding-right:20px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
     display: inline-block;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.nav-links:hover {
-    color: aqua;
-    text-decoration:none;
 }
 
 .secondary-title {
@@ -86,6 +80,13 @@ a {
 .secondary-section {
     padding: 30px;
     margin: 30px 0px;
+}
+
+.widget-section {
+    padding: 30px;
+    margin: 30px 0px;
+    background-color: white;
+    margin-bottom: 20%;
 }
 
 .secondary-content {
@@ -110,8 +111,10 @@ a {
     font-size: 20px;
 }
 
-.button:hover {
-    background-color: gray;
+
+.form {
+    width: 100%;
+    margin-top: 10%;
 }
 
 .center {
@@ -120,9 +123,16 @@ a {
 }
 
 .srch-box {
-    width:500px;
+    width: 70%;
     margin:50px auto;
     margin-bottom: 150px
+}
+
+.widget {
+    padding-top:15px;
+    padding-bottom: 15px;
+    width: 100%;
+    margin-bottom: 5%;
 }
 
 .search {
@@ -147,6 +157,7 @@ a {
 .footer{
     padding-top:30px;
     padding-bottom: 30px;
+    height: auto;
 }
 
 .full {
@@ -161,8 +172,20 @@ a {
     padding-left: 30px;
 }
 
-/*
-.container {
+/*.container {
     width:1000px;
     margin: 0 auto;
 }*/
+
+.map {
+    width: 300px;
+    height: 150px;
+}
+
+.map-section {
+    padding: 50px;
+}
+
+.content-box{
+    padding: 10px;
+}
