@@ -1,0 +1,30 @@
+
+/*stylsheet that Aysha did for the about page. To be merged with the main stylesheet (style.css) later */
+
+.jumbotron {
+  position: relative;
+  background: url("15.jpg");
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+footer {
+  background-color: #003559;
+  color: white;
+  padding: 30px;
+  border-top: 1px solid #333333;
+  line-height: 2;
+}
+
+.navbar {
+  margin-bottom: 0 !important; 
+  height: 90px;
+  font-size: 20px;
+}
+
+.template {
+  background-url ("courthouse-bw.jpg");
+}
