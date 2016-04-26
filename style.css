@@ -1,9 +1,8 @@
-
 body {
     font-size: 100%;
 }
 
-.main-header{
+.main-header {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 40px;
     text-align: center;
@@ -12,7 +11,7 @@ body {
     margin-top: 0px;
 }
 
-.main-content{
+.main-content {
     color: white;
     text-align: center;
     font-size: 18px;
@@ -32,7 +31,7 @@ body {
     width: 70%;
 }
 
-.search{
+.search {
     padding-bottom: 10%;
 }
 
@@ -40,8 +39,7 @@ body {
     max-width: 200px;
 }
 
-.header {
-}
+.header {}
 
 .logo {
     float: left;
@@ -51,9 +49,7 @@ body {
     font-weight: 400;
 }
 
-.logo-type {
-
-}
+.logo-type {}
 
 .logo-type a {
     color: black;
@@ -68,11 +64,11 @@ body {
     border: 1px solid #e8e8e8;
 }
 
-.nav-links{
+.nav-links {
     float: right;
     margin-left: 10px;
     padding-top: 52px;
-    padding-right:20px;
+    padding-right: 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     text-transform: uppercase;
@@ -94,7 +90,6 @@ body {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
-
 }
 
 .div-line {
@@ -103,6 +98,7 @@ body {
     background-color: #003559;
     margin: 0 auto;
 }
+
 .secondary-section {
     padding: 30px;
     margin: 30px 0px;
@@ -124,7 +120,7 @@ body {
 }
 
 .button {
-    background-color: #333; 
+    background-color: #333;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -139,7 +135,6 @@ body {
 
 .button:hover {
     background-color: #003559;
-
 }
 
 .button a {
@@ -156,12 +151,10 @@ body {
     color: white;
 }
 
- .button a:active {
+.button a:active {
     text-decoration: none;
     color: white;
 }
-
-
 
 .form {
     width: 100%;
@@ -175,7 +168,7 @@ body {
 
 .srch-box {
     width: 70%;
-    margin:50px auto;
+    margin: 50px auto;
     margin-bottom: 150px;
 }
 
@@ -185,54 +178,67 @@ body {
 }
 
 .widget {
-    padding-top:15px;
+    padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 20px;
     width: 100%;
     margin-bottom: 5%;
 }
 
+.select {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    width: 100%;
+    margin-bottom: 5%;
+    -webkit-appearance: none;
+}
+
 .search {
-    padding:8px 15px;
-    border:1px solid #dbdbdb;
+    padding: 8px 15px;
+    border: 1px solid #dbdbdb;
 }
 
-.srch-btn{
-    position:relative;
-    padding:7px 15px;
-    left:-8px;
-    border:2px solid #207cca;
-    background-color:#207cca;
-    color:#fafafa;
+.srch-btn {
+    position: relative;
+    padding: 7px 15px;
+    left: -8px;
+    border: 2px solid #207cca;
+    background-color: #207cca;
+    color: #fafafa;
 }
 
-.srch-btn:hover  {
-    background-color:#fafafa;
-    color:#207cca;
+.srch-btn:hover {
+    background-color: #fafafa;
+    color: #207cca;
 }
 
 .search-section {
     padding: 10px;
+    background-color: #003559;
 }
 
-.footer{
-    padding-top:30px;
+.footer {
+    padding-top: 30px;
     padding-bottom: 30px;
     height: auto;
 }
 
 .full {
     background-color: #003559;
-
 }
 
 .footer-text {
-    color:#808080;
+    color: #808080;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     line-height: 1.5;
     padding-left: 30px;
 }
 
+.footer-content {
+    color: white;
+}
 /*.container {
     width:1000px;
     margin: 0 auto;
@@ -247,7 +253,7 @@ body {
     padding: 20px;
 }
 
-.content-box{
+.content-box {
     padding: 30px;
     background-color: white;
     position: absolute;
@@ -266,11 +272,19 @@ body {
     color: white;
 }
 
-#section-1:target, #section-2:target, #section-3:target, #section-4:target, #section-5:target {
+#section-1:target,
+#section-2:target,
+#section-3:target,
+#section-4:target,
+#section-5:target {
     z-index: 1;
 }
 
-#section-1 a, #section-2 a, #section-3 a, #section-4 a, #section-5 a{
+#section-1 a,
+#section-2 a,
+#section-3 a,
+#section-4 a,
+#section-5 a {
     background-color: black;
     display: block;
     text-decoration: none;
@@ -301,8 +315,7 @@ li:target a {
 
 .court-name {
     margin: 0px;
-    padding:0px;
-
+    padding: 0px;
 }
 
 .court-address {

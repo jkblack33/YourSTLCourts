@@ -12,7 +12,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type=text/css href="style.css" />
     <link rel="stylesheet" type=text/css href="reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
     <!-- Optional theme -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Latest compiled and minified JavaScript -->
@@ -27,10 +27,14 @@
                     <h2 class="logo-type"><a href="index.html">YourSTLCourts</a></h2>
                 </div>
                 <ul>
-                    <li class="nav-links selected"><a href="about.html">About</a></li>
-                    <li class="nav-links"><a href="#">FAQ</a></li>
-                    <li class="nav-links"><a href="court-template.html">Search Court Info</a></li>
-                    <li class="nav-links"><a href="find-your-ticket.html">Find Your Ticket</a></li>
+                    <li class="nav-links selected"><a href="about.html">About</a>
+                    </li>
+                    <li class="nav-links"><a href="#">FAQ</a>
+                    </li>
+                    <li class="nav-links"><a href="court-template.html">Search Court Info</a>
+                    </li>
+                    <li class="nav-links"><a href="find-your-ticket.html">Find Your Ticket</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -41,10 +45,17 @@
             <div class="row">
                 <div class="col-sm-4">
                     <section class="widget-section box">
-                        <h3 class="secondary-title">Do you have a ticket number?</h3>
+                        <h3 class="secondary-title">Do you have your ticket number?</h3>
                         <div class="div-line"></div>
                         <form class="form">
                             <input class="widget" type="text" placeholder="Enter your ticket number" required>
+                            <select class="select" placeholder="Select your city" name="city" required>
+                                <option value="" disabled selected>Select your city</option>
+                                <option value="volvo">St. Louis City</option>
+                                <option value="saab">Ferguson</option>
+                                <option value="fiat">Jennings</option>
+                                <option value="audi">Dellwood</option>
+                            </select>
                             <input class="button" type="button" value="Find ticket">
                         </form>
                     </section>
@@ -55,7 +66,7 @@
                         <div class="div-line"></div>
                         <form class="form">
                             <input class="widget" type="text" placeholder="Enter your license number" required>
-                            <select class="widget" placeholder="Select your city" name="city" required>
+                            <select class="select" placeholder="Select your city" name="city" required>
                                 <option value="" disabled selected>Select your state</option>
                                 <option value="volvo">missouri</option>
                             </select>
@@ -69,7 +80,7 @@
                         <div class="div-line"></div>
                         <form class="form">
                             <input class="widget" type="text" placeholder="Enter your last name" required>
-                            <select class="widget" placeholder="Select your city" name="city" required>
+                            <select class="select" placeholder="Select your city" name="city" required>
                                 <option value="" disabled selected>Select your city</option>
                                 <option value="volvo">St. Louis City</option>
                                 <option value="saab">Ferguson</option>
