@@ -4,69 +4,91 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourSTLCourts</title>
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <title>YourSTLCourts</title>
-    <!-- Latest compiled and minified CSS -->
+    <!-- Custom Stylesheet for CivTech -->
     <link rel="stylesheet" type=text/css href="style.css" />
     <link rel="stylesheet" type=text/css href="reset.css" />
+    <!-- Latest compiled and minified CSS for bootstrap -->
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-    <!-- Optional theme -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <!-- Script for Google Maps -->
+    <!-- latest jQuery -->
+    <script src="jquery-1.12.3.min.js"></script>
+    <!-- link to custom jquery for secondary navigation -->
+    <script src="application.js" type="text/javascript" charset="utf-8" async defer></script>
+    <!-- Script for Google Maps plugin -->
     <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+    <script src="bootstrap.min.js"></script>
     <script type='text/javascript'>
-        function init_map() {
-            var myOptions = {
-                zoom: 16,
-                center: new google.maps.LatLng(38.7152569, -90.32639360000002),
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-            marker = new google.maps.Marker({
-                map: map,
-                position: new google.maps.LatLng(38.7152569, -90.32639360000002)
-            });
-            infowindow = new google.maps.InfoWindow({
-                content: '<strong>Bel-Ridge</strong><br>8920 Natural Bridge Road<br>'
-            });
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.open(map, marker);
-            });
+    function init_map() {
+        var myOptions = {
+            zoom: 16,
+            center: new google.maps.LatLng(38.7152569, -90.32639360000002),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        marker = new google.maps.Marker({
+            map: map,
+            position: new google.maps.LatLng(38.7152569, -90.32639360000002)
+        });
+        infowindow = new google.maps.InfoWindow({
+            content: '<strong>Bel-Ridge</strong><br>8920 Natural Bridge Road<br>'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
             infowindow.open(map, marker);
-        }
-        google.maps.event.addDomListener(window, 'load', init_map);
+        });
+        infowindow.open(map, marker);
+    }
+    google.maps.event.addDomListener(window, 'load', init_map);
     </script>
 </head>
 
 <body>
-    <header class="container-fluid box">
+    <header class="container-fluid">
         <div class="row">
-            <div class="header col-sm-12">
+            <!-- <div class="header col-xs-12">
                 <div class="logo">
                     <h2 class="logo-type"><a href="index.html">YourSTLCourts</a></h2>
                 </div>
-                <ul>
-                    <li class="nav-links selected"><a href="about.html">About</a>
-                    </li>
-                    <li class="nav-links"><a href="#">FAQ</a>
-                    </li>
-                    <li class="nav-links"><a href="court-template.html">Search Court Info</a>
-                    </li>
-                    <li class="nav-links"><a href="find-your-ticket.html">Find Your Ticket</a>
-                    </li>
-                </ul>
-            </div>
+                <div class="nav-collapse">
+                    <ul>
+                        <li class="nav-links selected"><a href="about.html">About</a></li>
+                        <li class="nav-links"><a href="#">Help</a></li>
+                        <li class="nav-links"><a href="court-template.html">Search Court Info</a></li>
+                        <li class="nav-links"><a href="find-your-ticket.html">Find Your Ticket</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">YourSTLCourts</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="find-your-ticket.html">Find Your Ticket</a></li>
+                            <li class="active"><a href="court-template.html">Search Court Info</a></li>
+                            <li><a href="help.html">Help</a></li>
+                            <li><a href="about.html">About</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
     <div class="container-fluid box">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="search-section container-full">
+            <div class="col-sm-12 col-xs-12">
+                <div class="search-section container-fluid full">
                     <form class="center form">
                         <input class="srch-box-2 container-fluid search" type="text" placeholder="Search..." required>
                         <!-- <input class="srch-btn" type="button" value="Search"> -->
@@ -76,99 +98,246 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <!-- <section class="header-image">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="map box">
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <h2>Bel-Ridge</h2>
-                            <ul>
-                                <li>Judge: Thomas Flach</li>
-                                <li>Clerk: Jennifer Giles</li>
-                                <li>Address: 8920 Natural Bridge Road</li>
-                                <li>Phone: 314.429.2878</li>
-                                <li>Court Schedule: 1st & 3rd Wednesdays monthly at 4pm</li>
-                                <li>Website: http://www.bel-ridge.us</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section> -->
+                <div class="see-all-box">
+                    <a href="#">Back to Court Directory</a>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3">
                 <div class="aside">
-                    <ul class="aside-nav">
-                        <li class="secondary-nav box"><a href="#section-1">Court Rights</a>
-                        </li>
-                        <li class="secondary-nav box"><a href="#section-2">Court Procedure</a>
-                        </li>
-                        <li class="secondary-nav box"><a href="#section-3">Proper Attire</a>
-                        </li>
-                        <li class="secondary-nav box"><a href="#section-4">Court Fees and Fines </a>
-                        </li>
-                        <li class="secondary-nav box"><a href="#section-5">Contact Information</a>
-                        </li>
+                    <ul class="aside-nav tabs">
+                        <li class="secondary-nav current box" data-tab="section-1">Court Rights</li>
+                        <li class="secondary-nav box" data-tab="section-2">Court Procedure</li>
+                        <li class="secondary-nav box" data-tab="section-3">Dress Code</li>
+                        <li class="secondary-nav box" data-tab="section-4">Court Fees and Fines</li>
+                        <li class="secondary-nav box" data-tab="section-5">Contact Information</li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-9">
-                <div class="section-wrapper">
-                    <div id="section-1" class="content-box box">
+                <div id="Content">
+                    <div id="section-1" class="content-box current">
                         <h1 class="section-title">Court Rights</h1>
                         <p class="section-content">You must first enter a plea. You may plead not guilty, guilty, or guilty with an explanation. If you plead NOT GUILTY, your case will be set for trial. You must appear on the date and at the time the trial is scheduled or a warrant will be issued for your arrest. At your trial, you should be prepared to present any evidence you believe will help you in your defense. The rules of evidence apply at your trial, which may prevent some evidence you may want to present from being admitted before the Judge.</p>
                         <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
                         <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
                         <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. </p>
                     </div>
-                    <div id="section-2" class="content-box box">
+                    <div id="section-2" class="content-box">
                         <h1 class="section-title">Court Procedure</h1>
                         <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
                         <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimu</p>
                         <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
                     </div>
-                    <div id="section-3" class="content-box box">
-                        <h1 class="section-title">Proper Attire</h1>
+                    <div id="section-3" class="content-box">
+                        <h1 class="section-title">Dress Code</h1>
                         <p class="section-content">You must dress appropriately if you enter the courthouses. No halter tops, t-shirts, shorts, baggy pants, or other inappropriate clothing will be tolerated. You also must turn off all pagers and cell-phones.</p>
                         <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
                     </div>
-                    <div id="section-4" class="content-box box">
+                    <div id="section-4" class="content-box">
                         <h1 class="section-title">Court Fees and Fines</h1>
-                        <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
-                        <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
-                        <p class="section-content"> Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
+                        <table>
+                            <th>Offense</th>
+                            <th>Fine</th>
+                            <th>Court Cost</th>
+                            <th>Total</th>
+                            <tr>
+                                <td>Corner Cutting to Avoid Signal</td>
+                                <td>$70.50</td>
+                                <td>$24.50</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Driving On Closed Road</td>
+                                <td>$70.50</td>
+                                <td>$24.50</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Driving Over Curb</td>
+                                <td>$70.50</td>
+                                <td>$24.50</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Driving Wrong Side of Road</td>
+                                <td>$70.50</td>
+                                <td>$24.50</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Driving Wrong Way (One Way Street)</td>
+                                <td>$70.50</td>
+                                <td>$24.50</td>
+                                <td>$95.00</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <th>Offense</th>
+                            <th>Total Cost</th>
+                            <tr>
+                                <td>Blocking Driveway or Alley</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>Expired License Plates (Tags)</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>Failure to Secure a Load</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>Fake Temporary Tags</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>Fictitious License Tabs</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>Improper Exhaust or Muffler</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>Improper Registration (Failure to Register)</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>License Plate not Illuminated</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>No Brake Lights</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>No Headlight</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>No Inspection Sticker</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>No License Plates</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>No Motorcycle Helmet</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>No Taillights</td>
+                                <td>$75.00</td>
+                            </tr>
+                            <tr>
+                                <td>Child Restraint Seat Violation*</td>
+                                <td>$49.00</td>
+                            </tr>
+                        </table>
+                        <table>
+                            <th>Offense</th>
+                            <th>Total</th>
+                            <tr>
+                                <td>Failure to Keep to the Right</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Failure to Obey Electric Signal</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Failure to Obey Stop Sign</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Failure to Sound Horn</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Failure to Yield</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Failure to Yield to Emergency Vehicles</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Following too Closely</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Impeding/Obstructing Traffic Movement</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Improper Backing</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Improper Lane Usage</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Improper Passing</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Improper/Prohibited Turn</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>No Through Traffic</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Prohibited U-Turn</td>
+                                <td>$95.00</td>
+                            </tr>
+                            <tr>
+                                <td>Traffic Turn Signal Violation</td>
+                                <td>$95.00</td>
+                            </tr>
+                        </table>
                     </div>
-                    <div id="section-5" class="content-box box">
+                    <div id="section-5" class="content-box">
                         <h1 class="section-title">Contact Information</h1>
                         <section class="map-section">
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div style='overflow:hidden;height:300px;width:300px;'>
                                         <div id='gmap_canvas' style='height:300px;width:300px;'></div>
-                                        <div><small><a href="http://embedgooglemaps.com">                                   embed google maps                           </a></small>
-                                        </div>
-                                        <div><small><a href="http://buywebtrafficexperts.com">buy website traffic</a></small>
-                                        </div>
                                         <style>
-                                            #gmap_canvas img {
-                                                max-width: none!important;
-                                                background: none!important
-                                            }
+                                        #gmap_canvas img {
+                                            max-width: 300px !important;
+                                            background: none!important
+                                            margin-right: 10px !important;
+                                            margin-bottom: 10px !important;
+                                            position: none !important;
+                                        }
                                         </style>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
                                     <div class="court-address">
                                         <h2 class="court-name">Bel-Ridge</h2>
-                                        <ul>
-                                            <li>Judge: Thomas Flach</li>
-                                            <li>Clerk: Jennifer Giles</li>
-                                            <li>Address: 8920 Natural Bridge Road</li>
-                                            <li>Phone: 314.429.2878</li>
-                                            <li>Court Schedule: 1st & 3rd Wednesdays monthly at 4pm</li>
-                                            <li>Website: http://www.bel-ridge.us</li>
+                                        <ul class="court-address-left">
+                                            <li>Judge: </li>
+                                            <li>Clerk: </li>
+                                            <li>Address: </li>
+                                            <li>Phone: </li>
+                                            <li>Court Schedule: </li>
+                                            <li>Website: </li>
+                                        </ul>
+                                        <ul class="court-address-right">
+                                            <li>Thomas Flach</li>
+                                            <li>Jennifer Giles</li>
+                                            <li>8920 Natural Bridge Road</li>
+                                            <li>314.429.2878</li>
+                                            <li>1st & 3rd Wednesdays monthly at 4pm</li>
+                                            <li>http://www.bel-ridge.us</li>
                                         </ul>
                                     </div>
                                 </div>
