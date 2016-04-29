@@ -276,7 +276,7 @@ body {
 }
 
 .tabs li.current{
-    background: #e67e22;
+    background: blue;
     color: #FFF;
 }
 
@@ -414,6 +414,10 @@ th {
 //     display: inline-block;
 // }
 
+.navbar {
+    margin-top: 20px !important;
+}
+
 .navbar-brand {
     font-family: 'Lato', sans-serif !important;
     padding: 20px !important;
@@ -422,13 +426,27 @@ th {
 
 }
 
+.navbar-brand:hover{
+    color: aqua !important;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: aqua !important;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: aqua !important;
+     background-color: white !important;
+}  
+
 nav li {
      margin-left: 10px;
     // padding-top: 52px;
     padding-right: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.90em !important;
+    font-family: 'Montserrat', sans-serif !important;
+    // font-size: 0.90em !important;
     text-transform: uppercase;
+    color: black !important;
 }
 
 .question {
