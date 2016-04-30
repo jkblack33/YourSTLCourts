@@ -27,6 +27,13 @@ section,
 summary {
   display: block;
 }
+
+header {
+  color: #E5F9E0;
+  display: block;
+}
+
+
 audio,
 canvas,
 progress,
