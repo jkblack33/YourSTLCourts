@@ -57,7 +57,7 @@ body {
 
 .logo-type a:hover {
     text-decoration: none;
-    color: aqua;
+    color: #003559;
 }
 
 .box {
@@ -81,7 +81,7 @@ body {
 
 .nav-links a:hover {
     text-decoration: none;
-    color: aqua;
+    color: #003559;
 }
 
 .secondary-title {
@@ -191,7 +191,6 @@ body {
     padding-left: 20px;
     width: 100%;
     margin-bottom: 5%;
-    -webkit-appearance: none;
 }
 
 .search {
@@ -276,12 +275,12 @@ body {
 }
 
 .tabs li.current{
-    background: blue;
+    background: #003559;
     color: #FFF;
 }
 
 .secondary-nav:hover {
-    background-color: blue;
+    background-color: #003559;
     color: white;
     text-decoration: none;
 }
@@ -299,7 +298,7 @@ body {
 #section-3 a,
 #section-4 a,
 #section-5 a {
-    background-color: blue;
+
     display: block;
     text-decoration: none;
 }
@@ -315,7 +314,7 @@ li:target a {
 
 
 .selected {
-    color: aqua !important;
+    color: #003559 !important;
 }
 
 .aside {
@@ -349,6 +348,7 @@ li:target a {
     line-height: 1.5em;
     font-size: 1.2em;
     font-family: 'Lato', sans-serif;
+    margin-bottom: 3%;
 }
 
 .see-all-box{
@@ -368,6 +368,8 @@ li:target a {
     font-weight: bold;
     margin-top: 10px;
     font-size: 1.3em;
+    list-style: none;
+    float: left;
 }
 
 .court-address-right {
@@ -376,14 +378,40 @@ li:target a {
     margin-right: 20px;
     margin-top: 15px;
     font-size: 1.3em;
+    list-style: none;
+    float: left;
 }
+
+.court-contact-info table {
+    margin-left: 20px !important;
+}
+
+
+.court-contact-info table, .court-contact-info  td, .court-contact-info  tr{
+    border: none !important;
+    text-align: left !important;
+    padding: 1% !important;
+    height: 0px !important;
+    font-size: 1.15em !important;
+}
+
+.court-contact-info tr td:first-child {
+    font-weight: bold;
+}
+
+.court-contact-info tr td:last-child {
+    padding-left: 2% !important;
+}
+
 
 table {
     height: 70% !important; 
     width: 100% !important;
     margin-bottom: 10% !important;
   }
+
 th,
+
 td {
   text-align: center !important;
   border: 2px solid #007EA7 !important;
@@ -396,6 +424,10 @@ td {
 th {
     font-weight: bold !important;
     font-size: 1.2em !important;
+}
+
+tr td:first-child {
+    text-align: left !important;
 }
 
 .navbar-default {
@@ -427,15 +459,15 @@ th {
 }
 
 .navbar-brand:hover{
-    color: aqua !important;
+    color: #003559 !important;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-    color: aqua !important;
+    color: #003559 !important;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-    color: aqua !important;
+    color: #003559 !important;
      background-color: white !important;
 }  
 
@@ -450,9 +482,58 @@ nav li {
 }
 
 .question {
-     color: #78FFD6;
+     color: blue;
+     font-size: 1.5em;
+}
+
+.answer {
+    font-size: 1.2em;
+    margin-bottom: 2%;
 }
 
 .help-heading {
-    color:#20A4F3;
+    margin-bottom: 2%;
+}
+
+.page-header {
+    text-align: center;
+    border: none !important;
+    margin-top: 1% !important;
+}
+
+.content-container {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 2% 3%;
+}
+
+.court-procedure-list li {
+    line-height: 1.5;
+    margin-bottom: 2%;
+    padding-left: 2%;
+}
+
+.court-procedure-list li:first-child {
+    margin-top: 2%;
+}
+
+.court-name-box{
+    display: inline;
+    float: left;
+    padding-left: 3%;
+    margin-left: 3%;
+}
+
+.court-name-header {
+}
+
+// .court-procedure-list li {
+//     list-style: inherit;
+// }
+
+.columns {
+     -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
 }
