@@ -20,12 +20,18 @@ body {
 }
 
 .hero {
-    background-image: url(new-trees.jpg);
+    background-image: url(STL-dark.jpg);
     background-size: cover;
     background-position: 0px -120px;
     background-repeat: no-repeat;
     overflow: hidden;
+    position: relative;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
 }
+
 
 .hero-wrapper {
     width: 70%;
@@ -258,7 +264,6 @@ body {
 
 
 .content-box {
-    padding: 30px;
     background-color: white;
     // position: absolute;
     width: 100%;
@@ -468,7 +473,7 @@ tr td:first-child {
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #003559 !important;
-     background-color: white !important;
+    background-color: white !important;
 }  
 
 nav li {
@@ -521,8 +526,6 @@ nav li {
 .court-name-box{
     display: inline;
     float: left;
-    padding-left: 3%;
-    margin-left: 3%;
 }
 
 .court-name-header {
@@ -536,4 +539,37 @@ nav li {
      -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
     column-count: 3;
+}
+
+.header-color {
+    background-color: #e5f9e0 !important;
+}
+
+.map-container {
+    width: 20em;
+    height: 20em;
+
+    display: inline-block;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:100%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.aside-nav {
+    padding: 0px;
+}
+
+.spacer {
+    margin-bottom: 10%;
 }

@@ -28,7 +28,7 @@
             center: new google.maps.LatLng(38.7152569, -90.32639360000002),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+        map = new google.maps.Map(document.getElementById('googlemap'), myOptions);
         marker = new google.maps.Marker({
             map: map,
             position: new google.maps.LatLng(38.7152569, -90.32639360000002)
@@ -48,19 +48,7 @@
 <body>
     <header class="container-fluid">
         <div class="row">
-            <!-- <div class="header col-xs-12">
-                <div class="logo">
-                    <h2 class="logo-type"><a href="index.html">YourSTLCourts</a></h2>
-                </div>
-                <div class="nav-collapse">
-                    <ul>
-                        <li class="nav-links selected"><a href="about.html">About</a></li>
-                        <li class="nav-links"><a href="#">Help</a></li>
-                        <li class="nav-links"><a href="court-template.html">Search Court/Info</a></li>
-                        <li class="nav-links"><a href="find-your-ticket.html">Find Your Ticket</a></li>
-                    </ul>
-                </div>
-            </div> -->
+            <div class="col-sm-12">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -69,18 +57,19 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="index.html" class="pull-left"><img src="logo.png"></a>
+                        <a href="index.html"><img src="LOGO-ALT-COLOR.png"></a>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="find-your-ticket.html">Find Your Ticket</a></li>
-                            <li class="active"><a href="court-list.html">Search Court Info</a></li>
+                            <li class="active"><a href="court-list.html">Search Court/Info</a></li>
                             <li><a href="help.html">Help</a></li>
                             <li><a href="about.html">About</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            </div>
         </div>
     </header>
     <div class="container-fluid">
@@ -97,7 +86,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="court-name-box">
-                    <h1 class="court-name-header">Bel-Ridge (sample)</h1>
+                    <h1 class="court-name-header">Bel-Ridge</h1>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -353,16 +342,8 @@ RIGHTS LISTED ABOVE</h2>
                         <section class="map-section">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    <div style='overflow:hidden;height:300px;width:300px;'>
-                                        <div id='gmap_canvas' style='height:300px;width:300px;'></div>
-                                        <style>
-                                        #gmap_canvas img {
-                                            max-width: 300px !important;
-                                            background: none!important margin-right: 10px !important;
-                                            margin-bottom: 10px !important;
-                                            position: none !important;
-                                        }
-                                        </style>
+                                    <div class="map-responsive">
+                                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.110974013866!2d-90.32858764921411!3d38.715261065164725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87df35b875cbaadb%3A0x60cbbf42f42cddf5!2s8920+Natural+Bridge+Rd%2C+St+Louis%2C+MO+63121!5e0!3m2!1sen!2sus!4v1462124836264" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                                     </div>
                                 </div>
                                 <div class="col-sm-8">
@@ -402,7 +383,7 @@ RIGHTS LISTED ABOVE</h2>
         </div>
     </div>
     </div>
-     <footer class="full container-fluid">
+    <footer class="full container-fluid">
         <div class="row">
             <div class="col-sm-6">
                 <div class="container-fluid footer">
@@ -414,8 +395,7 @@ RIGHTS LISTED ABOVE</h2>
                         <a href="http://opendatastl.org/" target="_blank">Open Data STL</a> , and
                         <a href="http://stlouisco.com/" target="_blank"> St. Louis County</a>. A prototype of this website was developed in September 2015 by participants of
                         <a href="http://globalhack.org/" target="_blank">GlobalHack</a>. Informational components of this website were developed by students of Hands Up United's Tech Institute. </p>
-
-                        <p class="footer-content">Copyright 2016 CivTech</p>
+                    <p class="footer-content">Copyright 2016 CivTech</p>
                 </div>
             </div>
             <div class="col-sm-6">
